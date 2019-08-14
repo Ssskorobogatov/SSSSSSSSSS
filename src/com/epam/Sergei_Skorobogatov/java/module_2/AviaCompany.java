@@ -1,12 +1,14 @@
-package com.epam.Sergei_Skorobogatov.java.lesson3.task3;
-
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Aircrafts.Boeing737;
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Helicopters.Bell205;
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Quadrocopters.Xplorer1;
+package com.epam.Sergei_Skorobogatov.java.module_2;
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
+
+import com.epam.Sergei_Skorobogatov.java.module_2.Aircrafts.Boeing737;
+import com.epam.Sergei_Skorobogatov.java.module_2.Helicopters.Bell205;
+import com.epam.Sergei_Skorobogatov.java.module_2.Quadrocopters.Xplorer1;
+
+
+
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -25,7 +27,6 @@ public class AviaCompany {
         fleet[0] = boeing737;
         fleet[1] = bell205;
         fleet[2] = xplorer1;
-
 
         Aviapark fleet1 = new Aviapark(fleet);
 

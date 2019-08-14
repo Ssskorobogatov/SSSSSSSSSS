@@ -1,7 +1,7 @@
-package com.epam.Sergei_Skorobogatov.java.lesson3.task3.Helicopters;
+package com.epam.Sergei_Skorobogatov.java.module_2.Helicopters;
 
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Info;
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Fleet;
+import com.epam.Sergei_Skorobogatov.java.module_2.Fleet;
+import com.epam.Sergei_Skorobogatov.java.module_2.Info;
 
 public class Bell205 extends Fleet implements Info {
     public Bell205(int year, int capacity, int seats, int distance, String mark) {

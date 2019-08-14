@@ -1,9 +1,11 @@
-package com.epam.Sergei_Skorobogatov.java.lesson3.task3.Aircrafts;
+package com.epam.Sergei_Skorobogatov.java.module_2.Aircrafts;
 
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Fleet;
-import com.epam.Sergei_Skorobogatov.java.lesson3.task3.Info;
+import com.epam.Sergei_Skorobogatov.java.module_2.Fleet;
+import com.epam.Sergei_Skorobogatov.java.module_2.Info;
 
-public class Boeing737 extends Fleet implements Info {
+import java.io.Serializable;
+
+public class Boeing737 extends Fleet implements Info, Serializable {
 
     public Boeing737(int year, int capacity, int seats, int distance, String mark) {
         super(year, capacity, seats, distance, mark);

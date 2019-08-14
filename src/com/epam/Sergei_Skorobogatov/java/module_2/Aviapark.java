@@ -1,12 +1,13 @@
-package com.epam.Sergei_Skorobogatov.java.lesson3.task3;
+package com.epam.Sergei_Skorobogatov.java.module_2;
 
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class Aviapark {
+public class Aviapark implements Serializable {
     Fleet[] fleet;
 
     public Aviapark(Fleet[] fleet) {

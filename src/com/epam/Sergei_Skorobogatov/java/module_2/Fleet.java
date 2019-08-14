@@ -1,12 +1,14 @@
-package com.epam.Sergei_Skorobogatov.java.lesson3.task3;
+package com.epam.Sergei_Skorobogatov.java.module_2;
 
-public abstract class Fleet implements Comparable {
+import java.io.Serializable;
 
-    protected int year;
-    protected int capacity;
-    protected int seats;
-    protected int distance;
-    protected String mark;
+public abstract class Fleet implements Comparable, Serializable {
+
+    public transient int year;
+    public transient int capacity;
+    public transient int seats;
+    public transient int distance;
+    public String mark;
 
 
     public Fleet(int year, int capacity, int seats, int distance, String mark) {
