@@ -18,8 +18,8 @@ public class Aviapark implements Serializable {
         int sum = 0;
         for (int i = 0; i < fleet.length; i++) {
             try {
-                if (fleet[i].capacity < 0) throw new IOException("Грузоподъемность не может быть отрицательной!");
-            } catch (IOException e) {                                                                                   // catch для отрицательных значений capacity
+                if (fleet[i].capacity < 0) throw new MyException("Грузоподъемность не может быть отрицательной!");
+            } catch (MyException e) {                                                                                   // созданный мной класс MyException для отрицательных значений capacity
                 e.printStackTrace();
             }
             sum += fleet[i].capacity;
