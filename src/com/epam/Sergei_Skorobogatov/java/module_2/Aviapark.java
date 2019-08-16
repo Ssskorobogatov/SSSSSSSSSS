@@ -1,6 +1,10 @@
 package com.epam.Sergei_Skorobogatov.java.module_2;
 
 
+import UncheckedExceptions.FirstException;
+import UncheckedExceptions.MyException;
+import UncheckedExceptions.SecondException;
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Arrays;
@@ -27,17 +31,14 @@ public class Aviapark implements Serializable {
         System.out.println("Общая грузоподъемность составляет: " + sum + " кг.");
     }
 
-    public void sumOfSeats() {
+    public void sumOfSeats() throws FirstException, SecondException {           // multicatch
         int sum = 0;
         for (int i = 0; i < fleet.length; i++) {
-            try {
-                if (fleet[i].seats < 0) throw new IOException("Количество мест должно быть положительным!");
-            } catch (IOException e) {                                                                               //catch для отрицательных значений
-                e.printStackTrace();
-            }
             sum += fleet[i].seats;
+            System.out.println("Общее количество мест составляет: " + sum + " чел.");
         }
-        System.out.println("Общее количество мест составляет: " + sum + " чел.");
+        if (sum < 0) {throw new FirstException();}
+        if (sum == 0) {throw new SecondException();}
     }
 
 

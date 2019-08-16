@@ -2,6 +2,8 @@ package com.epam.Sergei_Skorobogatov.java.module_2;
 
 
 
+import UncheckedExceptions.FirstException;
+import UncheckedExceptions.SecondException;
 import com.epam.Sergei_Skorobogatov.java.module_2.Aircrafts.Boeing737;
 import com.epam.Sergei_Skorobogatov.java.module_2.Helicopters.Bell205;
 import com.epam.Sergei_Skorobogatov.java.module_2.Quadrocopters.Xplorer1;
@@ -64,7 +66,12 @@ public class AviaCompany {
                             xplorer1.showInfo();
                             break;
                         case 2:
-                            fleet1.sumOfSeats();
+                            try {
+                                fleet1.sumOfSeats();
+                            } catch (FirstException | SecondException e) {
+                                e.printStackTrace();
+                            }
+
                             break;
                         case 3:
                             fleet1.sumOfCapacity();
